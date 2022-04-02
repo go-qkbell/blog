@@ -106,7 +106,6 @@ params:
     google:
       tracking_id: "G-5X49F2YSKE"
       anonymize_ip: # true, false (default)
-      SiteVerificationTag: "NBo4TsbNrXb16QhU1PVuOIkFzrrGtXCuY393ocMu4yI"
 
   # for search
   # https://fusejs.io/api/options.html
