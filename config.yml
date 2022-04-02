@@ -101,11 +101,6 @@ params:
     - name: email
       url: "mailto:go.qkbell@gmail.com"
 
-  # Analytics
-  analytics:
-    google:
-      SiteVerificationTag: "NBo4TsbNrXb16QhU1PVuOIkFzrrGtXCuY393ocMu4yI"
-
   # for search
   # https://fusejs.io/api/options.html
   fuseOpts:
