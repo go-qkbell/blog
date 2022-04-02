@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://go-qkbell.github.io/sitemap.xml
