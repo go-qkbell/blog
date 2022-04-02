@@ -87,8 +87,9 @@ params:
   homeInfoParams:
     Title: "Hello, 世界"
     Content: >
-      Welcome to my Devlog.  
-      I'm a junior Go Programmer.<br>
+      Welcome to my Devlog.<br>
+      My name is Jongseon and I'm 26 years old.<br>
+      I'm a Go Programmer.<br>
       I will be posting in Korean and English.<br>
       I'm not a fluent English writer, but I will try my best. &#128512;
   socialIcons:
