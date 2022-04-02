@@ -87,19 +87,30 @@ params:
   homeInfoParams:
     Title: "Hello, 世界"
     Content: >
+      [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgo-qkbell.github.io&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)<br>
       Welcome to my Devlog.<br>
       My name is Jongseon and I'm 26 years old.<br>
       I'm a Go Programmer.<br>
       I will be posting in Korean and English.<br>
       I'm not a fluent English writer, but I will try my best. &#128512;
+
   socialIcons:
     - name: github
       url: "https://github.com/go-qkbell"
     - name: email
       url: "mailto:go.qkbell@gmail.com"
 
-    # for search
-    # https://fusejs.io/api/options.html
+  # Analytics
+  analytics:
+    provider: "google-gtag"
+    # false (default), "google", "google-universal", "google-gtag", "custom"
+    google:
+      tracking_id: "G-5X49F2YSKE"
+      SiteVerificationTag: "googlef224ca5304254e39"
+      anonymize_ip: # true, false (default)
+
+  # for search
+  # https://fusejs.io/api/options.html
   fuseOpts:
     isCaseSensitive: false
     shouldSort: true
@@ -117,8 +128,3 @@ menu:
       url: /categories
     - name: Search
       url: /search
-
-sitemap:
-  changefreq: "daily"
-  filename: "sitemap.xml"
-  priority: 1.0
