@@ -25,4 +25,4 @@ I will be posting about things I've studied, experienced and how I solved them. 
 
 ## When to post?
 
-I will be posting probably 1 time a week.
+I will be posting once a week.
