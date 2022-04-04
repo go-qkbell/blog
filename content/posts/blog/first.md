@@ -1,8 +1,8 @@
 ---  
 title: "[README] Starting Devlog"  
 date: 2022-04-02
-categories: ["README", "Devlog"]  
-tags: ["README", "Devlog"]
+categories: ["README", "Devlog", "EN"]  
+tags: ["README", "Devlog", "EN"]
 
 summary: I'm starting my Devlog
 

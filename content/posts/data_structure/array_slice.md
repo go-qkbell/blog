@@ -1,8 +1,8 @@
 ---
 title: "[DataStructure] Array & Slice"  
 date: 2022-04-04
-categories: ["Go", "DataStructure"]  
-tags: ["Go", "DataStructure"]
+categories: ["Go", "DataStructure", "EN"]  
+tags: ["Go", "DataStructure", "EN"]
 
 summary: What are array and slice
 
@@ -73,9 +73,6 @@ No matter how long the array is, if you use index, it always costs O(1).<br>
 Array has good cache locality too.<br>
 Since it is stored in contiguous memory, there is less chance of cache miss.<br>
 
-<br><br>
-
-We've learned that array is a good data structure.<br>
 But since it has fixed size, it is a bit inflexible, so array is not often seen in Go code.<br>
 However, we see slices everywhere.<br>
 
@@ -105,7 +102,7 @@ One is same as initializing array, but without any length. Like []T<br>
 Second is by using built-in function called "make".<br>
 <br>
 func make([]T, len, cap) []T<br>
-make function takes a type, a length, and an optional capacity. (if capacity is empty, then it's same as length)
+make function takes a type, a length, and an optional capacity.
 
 ### Access Slice by Index
 ```go
