@@ -16,7 +16,7 @@ draft: false
 I usually search in google or stackoverflow when I'm stuck while coding.<br>
 Sometimes their answers lead me to third-party blogs.<br>
 When I find informative answers I really thank the author.<br>
-Also, they really motivate me to write posts like them.<br>
+Also, they motivate me to write posts like them.<br>
 I'm not a perfect programmer, but I think it will be great if I can share my knowledge and experience with others and get some feedbacks.
 
 ## What Contents?

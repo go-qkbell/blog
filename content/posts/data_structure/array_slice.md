@@ -13,7 +13,7 @@ draft: false
 
 ## What is Array?
 
-- Array is a collection of elements stored in contiguous memory.
+- Array is a collection of data stored in physically contiguous memory.
 - Array is fixed size. Once the size is given to it, it cannot be changed.
 - Elements must be same type.
 
@@ -29,7 +29,7 @@ func main() {
 	fmt.Println(s)  // [0 0 0 0]
 }
 ```
-You can define length of array like [4].<br>
+You can define length of array like [4]T.<br>
 Length of array is defined at compile time. So it cannot be changed.
 
 
@@ -98,7 +98,7 @@ func main() {
 }
 ```
 There are two ways to initialize slice.<br>
-One is same as initializing array, but without any length. Like []T<br>
+One is same as initializing array, but without any length. Like []T.<br>
 Second is by using built-in function called "make".<br>
 <br>
 func make([]T, len, cap) []T<br>
@@ -123,12 +123,12 @@ Because...
 
 ### Slice Internal
 
-[![DataStructure](/../images/slice-struct.png)](https://go.dev/blog/slices-intro)
+![DataStructure](/../images/slice-struct.png)
 
 Slice is just data structure that points to its underlying array.<br>
 It consists of a pointer to the array, the length of the slice, and capacity.<br>
 
-[![DataStructure](/../images/slice-1.png)](https://go.dev/blog/slices-intro)
+![DataStructure](/../images/slice-1.png)
 ```go
 package main
 
@@ -174,7 +174,7 @@ func main() {
 When adding element to the back of slice, if slice has free capacity, then it costs O(1).<br>
 You just have to push into the free space.<br>
 However if capacity does not have any free space, then the magic happens.<br>
-Slice copies its underlying array then make another new array with bigger size. (usually doubles)<br>
+Since array is fixed size and cannot be changed, slice copies its underlying array then make another new array with bigger size. (usually doubles)<br>
 Then paste old data into new array and points to it.<br>
 This costs O(N) because you have to copy N times.<br><br>
 
@@ -197,8 +197,8 @@ func main() {
 
 	s = append(s[:4], s[3:]...) // append to make replace spot
 	t = append(t[:4], t[3:]...) // append to make replace spot
-	s[3] = 100
-	t[3] = 100
+	s[3] = 100  // change
+	t[3] = 100  // change
 
 	fmt.Println(len(s), cap(s)) // 6 10
 	fmt.Println(len(t), cap(t)) // 6 10
@@ -231,7 +231,30 @@ func main() {
 ```
 When removing, element from first and last index is O(1).<br>
 Because you just move around length pointer.<br>
-But removing element in the middle is O(N).<br>
+But removing element in the middle needs append and costs O(N).<br>
+
+### Nil Slice
+```go
+package main
+
+import "fmt"
+
+func main() {
+	var a []int
+	var b []int = make([]int, 0)
+	var c []int = []int{}
+
+	fmt.Println(a, b, c) // [] [] []
+	fmt.Println(a == nil) // true
+	fmt.Println(b == nil) // false
+	fmt.Println(c == nil) // false
+}
+```
+Nil slice means, slice does not have memory address.<br>
+B and C slices are initialized with 0 length underlying array, and have memory address.<br>
+However, A slice is just declared and is not initialized. (A does not have underlying array)<br>
+All 3 of them have 0 length, but they are not same.<br>
+You have to be careful dealing with nil slice and empty slice.
 
 ## References
 
