@@ -1,5 +1,5 @@
 ---
-title: "[DataStructure] Linked List"  
+title: "[DataStructure] Singly Linked List"  
 date: 2022-04-09
 categories: ["Go", "DataStructure", "EN"]  
 tags: ["Go", "DataStructure", "EN"]
@@ -11,14 +11,14 @@ math: true
 draft: false
 ---
 
-## What is Linked List?
+## What is Singly Linked List?
 
 ![DataStructure](/../images/linkedlist.png)
 
 - Linked list is a linear collection of data.
 - Linked List is **NOT** stored in physically contiguous memory.
-- Linked List's length can be increased/decreased in run time.
-- Instead, Linked list has node that points to the next.
+- Linked List's length can be increased/decreased in runtime.
+- Instead, Linked list contains node that points to the next.
 
 ### Implement Linked List
 
@@ -60,14 +60,10 @@ func main() {
 	fmt.Println(newList)    // &{<nil> <nil> 0}
 }
 ```
-Linked list has head and tail, which is node.<br>
-Node consist of its own value and address of next node.<br>
+Linked list has head and tail, which is node's address.<br>
+Node consist of its own value and address to the next node.<br>
 
 ### Add Node to Linked List
-
-![DataStructure](/../images/add_front_list_1.png)
-![DataStructure](/../images/add_front_list_2.png)
-
 ```go
 func (s *SinglyLinkedList) AddFront(n *SinglyNode) {
 	if s.head == nil {
@@ -112,13 +108,25 @@ func (s *SinglyLinkedList) AddAt(n *SinglyNode, idx int) {
 	s.length++
 }
 ```
-Adding in the front or back of the linked list costs O(1).<br>
-Because all you have to do is make node and let linked list's head or tail point to it, and change links between nodes.<br>
+![DataStructure](/../images/singlylist1.png)
+![DataStructure](/../images/singlylist2.png)
+![DataStructure](/../images/singlylist3.png)
+
+Adding at the back of the linked list costs **O(1)**.<br>
+Because all you have to do is make linked list's current tail node to point to the new node.<br>
+Then change linked list's tail to the new node.<br>
 <br>
-However, adding in the given index is O(N), because you have to traverse until the index.<br>
-Remember how array and slice can access index in O(1)?<br>
-Because their memories are physically contiguous.<br>
-But since linked list memory is not physically contiguous, you have to follow along by nodes' next address.
+![DataStructure](/../images/singlylist1.png)
+![DataStructure](/../images/singlylist4.png)
+Adding at the front also costs **O(1)**.<br>
+Because all you have to do is make new node that points to linked list's current head node.<br>
+Then change linked list's head to the new node.<br>
+<br>
+However, adding at the given index is **O(N)**, because you have to traverse until the index.<br>
+<br>
+Remember how array and slice can access index O(1)?<br>
+Because array and slice's  memory is physically contiguous.<br>
+But since linked list's memory is **not** physically contiguous, you have to traverse all the way by following nodes' next addresses.
 
 ### Delete Node in Linked List
 ```go
@@ -180,8 +188,34 @@ func (s *SinglyLinkedList) RemoveNode(n *SinglyNode) {
 	s.length--
 }
 ```
-Deleting front node of the linked list costs O(1).<br>
-However deleting node at the back costs O(N).<br>
-Because since you don't know tail's previous node, you have to traverse all the way to tail node's previous node.<br>
-Deleting specific node costs O(N). <br>
+![DataStructure](/../images/singlylist5.png)
+Deleting front node of the linked list costs **O(1)**.<br>
+Just set your head node to current head node's next node.<br>
+
+![DataStructure](/../images/singlylist6.png)
+However deleting node at the back costs **O(N)**.<br>
+Because you don't know current tail node's previous node. (which is going to be a new tail node)<br>
+You have to traverse all the way to tail node's previous node.<br>
+Then delete tail node and set tail node's previous node to tail. <br>
+
+Deleting specific node also costs **O(N)**. <br>
 You don't know node's previous node, so you have to traverse to find previous node.
+
+### Singly Linked List Time Complexity
+
+- Insert at head: **O(1)**
+- Insert at tail: **O(1)**
+- Insert at index: **O(N)**
+- Remove at head: **O(1)**
+- Remove at tail: **O(N)**
+- Remove at index: **O(N)**
+- Search: **O(N)**
+
+There is improved linked list called **Doubly Linked List**.<br>
+We will talk about that in the next post.
+
+
+## References
+
+- https://www.geeksforgeeks.org/data-structures/linked-list/
+- https://www.programiz.com/dsa/linked-list

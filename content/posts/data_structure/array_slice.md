@@ -68,7 +68,7 @@ func main() {
 }
 ```
 Array has advantage in random access. It uses index to access the specific element.<br>
-No matter how long the array is, if you use index, it always costs O(1).<br>
+No matter how long the array is, if you use index, it always costs **O(1)**.<br>
 
 Array has good cache locality too.<br>
 Since it is stored in contiguous memory, there is less chance of cache miss.<br>
@@ -171,12 +171,12 @@ func main() {
 	fmt.Printf("%p\n", t)   // 0xc00018a030
 }
 ```
-When adding element to the back of slice, if slice has free capacity, then it costs O(1).<br>
+When adding element to the back of slice, if slice has free capacity, then it costs **O(1)**.<br>
 You just have to push into the free space.<br>
 However if capacity does not have any free space, then the magic happens.<br>
 Since array is fixed size and cannot be changed, slice copies its underlying array then make another new array with bigger size. (usually doubles)<br>
 Then paste old data into new array and points to it.<br>
-This costs O(N) because you have to copy N times.<br><br>
+This costs **O(N)** because you have to copy N times.<br><br>
 
 ```go
 package main
@@ -213,7 +213,7 @@ func main() {
 Now let's try to add to the middle.<br>
 It looks same as appending to last. But it's not.<br>
 Even though you have enough capacity and did not make new underlying array, you appended to make replace spot.<br>
-So it is O(N).
+So it is **O(N)**.
 
 ### Slice Remove
 ```go
@@ -229,9 +229,9 @@ func main() {
 	fmt.Println(s)  // [1 2 4 5]
 }
 ```
-When removing, element from first and last index is O(1).<br>
+When removing, element from first and last index is **O(1)**.<br>
 Because you just move around length pointer.<br>
-But removing element in the middle needs append and costs O(N).<br>
+But removing element in the middle needs append and costs **O(N)**.<br>
 
 ### Nil Slice
 ```go
@@ -254,7 +254,18 @@ Nil slice means, slice does not have memory address.<br>
 B and C slices are initialized with 0 length underlying array, and have memory address.<br>
 However, A slice is just declared and is not initialized. (A does not have underlying array)<br>
 All 3 of them have 0 length, but they are not same.<br>
-You have to be careful dealing with nil slice and empty slice.
+You have to be careful dealing with nil slice and empty slice.<br>
+
+### Slice Time Complexity
+only worst cases
+
+- Insert at head: **O(N)**
+- Insert at tail: **O(N)**
+- Insert at index: **O(N)**
+- Remove at head: **O(1)**
+- Remove at tail: **O(1)**
+- Remove at index: **O(N)**
+- Search: **O(1)**
 
 ## References
 

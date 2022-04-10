@@ -1,23 +1,22 @@
 ---  
-title: "[Study] Go 한국어 자료 모음"  
+title: "[Study] Go 한국어/영어 자료 모음"  
 date: 2022-04-04
 categories: ["Study", "Go", "KR"]  
 tags: ["Study", "Go", "KR"]
 
-summary: Go 한국어 자료 모음
+summary: Go 한국어/영어 자료 모음
 
 weight: 1
 math: true
 draft: false
 ---  
 
-## 내가 공부할 때 사용하는 자료들
+## 내가 공부할 때 사용하는 사이트들
 
 ### KR
 - https://ultimate-go-korean.gitbook.io/book/
 - https://miryang.gitbook.io/learn-go-with-tests/
 - http://pyrasis.com/go.html
-- https://www.youtube.com/c/TuckerProgramming
 
 ### EN
 - https://research.swtch.com/
@@ -26,4 +25,3 @@ draft: false
 - https://github.com/uber-go/guide/blob/master/style.md
 - https://go.dev/tour/welcome/1
 - https://www.reddit.com/r/golang/
-- https://www.youtube.com/c/JunminLee

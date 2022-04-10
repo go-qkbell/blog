@@ -1,6 +1,6 @@
 ---  
 title: "[README] Starting Devlog"  
-date: 2022-04-02
+date: 2022-03-31
 categories: ["README", "Devlog", "EN"]  
 tags: ["README", "Devlog", "EN"]
 
