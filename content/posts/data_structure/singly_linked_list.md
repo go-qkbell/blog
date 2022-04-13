@@ -20,7 +20,7 @@ draft: false
 - Linked List's length can be increased/decreased in runtime.
 - Instead, Linked list contains node that points to the next.
 
-### Implement Linked List
+### Implement Singly Linked List
 
 ```go
 package main
@@ -63,7 +63,7 @@ func main() {
 Linked list has head and tail, which is node's address.<br>
 Node consist of its own value and address to the next node.<br>
 
-### Add Node to Linked List
+### Add Node to Singly Linked List
 ```go
 func (s *SinglyLinkedList) AddFront(n *SinglyNode) {
 	if s.head == nil {
@@ -128,7 +128,7 @@ Remember how array and slice can access index O(1)?<br>
 Because array and slice's  memory is physically contiguous.<br>
 But since linked list's memory is **not** physically contiguous, you have to traverse all the way by following nodes' next addresses.
 
-### Delete Node in Linked List
+### Delete Node in Singly Linked List
 ```go
 func (s *SinglyLinkedList) RemoveFront() {
 	if s.head == nil {
