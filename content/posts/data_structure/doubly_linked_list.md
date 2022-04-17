@@ -4,7 +4,7 @@ date: 2022-04-13
 categories: ["Go", "DataStructure", "EN"]  
 tags: ["Go", "DataStructure", "EN"]
 
-summary: What is linked list
+summary: What is doubly linked list
 
 weight: 1
 math: true
@@ -168,4 +168,5 @@ You just have to set Doubly Linked List's tail to current tail node's previous n
 - Remove at head: **O(1)**
 - Remove at tail: **O(1)**
 - Remove at index: **O(N)**
+- Access Index: **O(N)**
 - Search: **O(N)**

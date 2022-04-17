@@ -4,7 +4,7 @@ date: 2022-04-09
 categories: ["Go", "DataStructure", "EN"]  
 tags: ["Go", "DataStructure", "EN"]
 
-summary: What is linked list
+summary: What is singly linked list
 
 weight: 1
 math: true
@@ -113,7 +113,7 @@ func (s *SinglyLinkedList) AddAt(n *SinglyNode, idx int) {
 ![DataStructure](/../images/singlylist3.png)
 
 Adding at the back of the linked list costs **O(1)**.<br>
-Because all you have to do is make linked list's current tail node to point to the new node.<br>
+Because all you have to do is make linked list's current tail node's next to point to the new node.<br>
 Then change linked list's tail to the new node.<br>
 <br>
 ![DataStructure](/../images/singlylist1.png)
@@ -209,6 +209,7 @@ You don't know node's previous node, so you have to traverse to find previous no
 - Remove at head: **O(1)**
 - Remove at tail: **O(N)**
 - Remove at index: **O(N)**
+- Access Index: **O(N)**
 - Search: **O(N)**
 
 There is improved linked list called **Doubly Linked List**.<br>

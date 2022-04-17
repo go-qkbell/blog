@@ -265,7 +265,8 @@ only worst cases
 - Remove at head: **O(1)**
 - Remove at tail: **O(1)**
 - Remove at index: **O(N)**
-- Search: **O(1)**
+- Access Index: **O(1)**
+- Search: **O(N)**
 
 ## References
 
