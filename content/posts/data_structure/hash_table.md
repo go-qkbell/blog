@@ -64,7 +64,7 @@ Problem of open addressing
 
 - Data clustering<br>
 -- Many data form groups in bucket, and it will start to take time to find a free slot or to search for an index.<br>
--- Need to re-hash has table when elements are deleted.
+-- Need to re-hash hash table when elements are deleted.
 
 ### Separate Chaining
 ![DataStructure](/../images/hash_chaining.png)
@@ -160,8 +160,8 @@ func hash(key string) int {
 
 ### Hash Table Time Complexity
 
-- Insert at head: **O(1)**
-- Remove at head: **O(1)**
+- Insert: **O(1)**
+- Remove: **O(1)**
 - Search: **O(1)**
 
 **BUT** hash function and collision really matters in time complexity when using hash table.<br>
